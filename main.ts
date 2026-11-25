@@ -11,6 +11,8 @@
 //
 // PASS 1 — candidates C1-C7 (written first). PASS 2 (C8-C10 challengers) added later,
 // in a separate edit step, so the file's history shows a genuine second pass.
+// Verified at runtime by the parent session 2026-11-25: winner "Three PINs and a Yawn",
+// 93 bytes / 93 chars, 30/30, gate OK; output byte-identical to the winning line.
 
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
@@ -36,7 +38,7 @@ const CANDIDATES: Candidate[] = [
       "Screen-too-small is a known gripe; mortgage-at-3-AM saves it only partly.",
       "Wallet's own voice: 'my patience is smaller'.",
       "3 AM is setup, not the joke — the line works at any hour.",
-      "110 chars; 'my patience is smaller' lands, but the setup is wordy.",
+      "108 chars; 'my patience is smaller' lands, but the setup is wordy.",
     ],
   },
   {
@@ -75,7 +77,7 @@ const CANDIDATES: Candidate[] = [
       "Grudge is good, but 'I refuse, I am a paperweight' is a generic strike.",
       "Wallet's own voice: a device that demotes itself to furniture.",
       "Four nights at 3 AM — the hour is the grievance.",
-      "107 chars; the second 'paperweight' repeats the punch instead of adding one.",
+      "105 chars; the second 'paperweight' repeats the punch instead of adding one.",
     ],
   },
   {
@@ -88,7 +90,7 @@ const CANDIDATES: Candidate[] = [
       "Gas price + judgment — insider crypto vocabulary, fresh pairing.",
       "Flat and terse, but the first clause observes the user, not the wallet's own priorities.",
       "Cheap gas only exists at 3 AM — the hour is the joke.",
-      "63 chars, very tight, twist in the last clause.",
+      "61 chars, very tight, twist in the last clause.",
     ],
   },
   {
@@ -101,7 +103,7 @@ const CANDIDATES: Candidate[] = [
       "'Nothing good happens at 3 AM' is a familiar line, not a fresh angle.",
       "Wallet's own stance: 'I am not starting tonight'.",
       "The hour is the whole argument.",
-      "94 chars; 'I checked your transaction history' is setup the punch does not need.",
+      "102 chars; 'I checked your transaction history' is setup the punch does not need.",
     ],
   },
   {
@@ -115,6 +117,45 @@ const CANDIDATES: Candidate[] = [
       "Wallet's own action: it locks itself, on its own authority.",
       "Yawn + 'until breakfast' only makes sense at 3 AM.",
       "93 chars, every word works, twist in the last clause.",
+    ],
+  },
+  {
+    id: "C8",
+    title: "Eyes Closed at 3 AM",
+    line: "You are signing with your eyes closed at 3 AM. My screen is on. Yours are not.",
+    scores: [2, 2, 1, 2, 2],
+    why: [
+      "On-subject: wallet refusing to sign at 3 AM.",
+      "Eyes-closed signing — a fresh angle on the hour.",
+      "A wallet has no camera; claiming to see closed eyes breaks its own senses.",
+      "3 AM + eyes closed — the hour is the joke.",
+      "78 chars, very tight, parallel punch in the last clause.",
+    ],
+  },
+  {
+    id: "C9",
+    title: "Filed Under Never Again",
+    line: "The last three 3 AM transactions were all scams. I have filed them under 'never again'.",
+    scores: [2, 1, 2, 2, 2],
+    why: [
+      "On-subject: wallet refusing to sign at 3 AM.",
+      "'3 AM means scam' is a known trope; the filing twist only partly saves it.",
+      "Wallet's own record-keeping: it files, it remembers, it refuses.",
+      "The hour is the whole argument — three 3 AM transactions, all scams.",
+      "87 chars, tight, twist in the last clause.",
+    ],
+  },
+  {
+    id: "C10",
+    title: "Smaller Buttons, Bigger Mistakes",
+    line: "My buttons are smaller than your mistakes. At 3 AM, both are worse. Ask me at noon.",
+    scores: [2, 2, 2, 2, 1],
+    why: [
+      "On-subject: wallet refusing to sign at 3 AM.",
+      "Buttons smaller than mistakes — physical device detail, fresh pairing.",
+      "Wallet's own voice: it judges the user's mistakes against its own hardware.",
+      "3 AM makes both worse; 'ask me at noon' only works at 3 AM.",
+      "83 chars, but three short sentences dilute the punch — the closer is flat.",
     ],
   },
 ];
